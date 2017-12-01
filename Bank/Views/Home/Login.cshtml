@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
+</head>
+<body>
+<p>Please Login</p>
+    <form>
+    <div>
+		<label>Username</label>
+        <input type="text" placeholder="Enter Username" name="user">
+
+		<label>Password</label>
+        <input type="text" placeholder="Enter Password" name="pw">
+
+		<button id="submit" type="submit">Login</button>
+	</div>
+	</form>
+
+
+		<script type="text/javascript">
+			$("#submit").click(function(evt){
+            var username = $('[name="user"]').val();
+			var password = $('[name="pw"]').val();
+			console.log(username);
+			console.log(password);
+			});
+		</script>
+    <!--:Post MVP for assignment (different in actual development) remember me, forgot password, login with FB-->
+</body>
+</html>

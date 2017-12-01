@@ -21,5 +21,18 @@ namespace Bank
             WebHost.CreateDefaultBuilder(args)
                 .UseStartup<Startup>()
                 .Build();
+        //made some model logic due to habit working with databases,
+        public static int Add(int currentBalance, int deposit)
+        {
+            int sum =  currentBalance + deposit;
+
+            return sum;
+        }
+        public static int Sub(int currentBalance, int withdrawl)
+        {
+            int diff = currentBalance - withdrawl;
+
+            return diff;
+        }
     }
 }

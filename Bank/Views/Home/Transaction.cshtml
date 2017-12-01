@@ -1,0 +1,100 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Transaction</title>
+		
+        <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
+
+    </head>
+    <body>
+        <p id="name"> </p>
+		<label>Account Balance</label>
+        <output id="bal" name="bal">0</output>
+        <form>
+            <div>
+                <label>Deposit</label>
+                <input type="text" value="0" name="depo1">
+                <button id="deposit" type="submit">Submit</button>
+                <label>Withdraw</label>
+                <input type="number" value="0" name="drawl1">
+                <button id="withdraw" type="submit">Submit</button>
+            </div>
+        </form>
+
+		<!--Cache.Add("depo", "deposit", null, DateTime.Now.AddSeconds(60), Cache.NoSlidingExpiration, CacheItemPriority.High, onRemove);
+}-->
+
+        <script type="text/javascript">
+
+		$(document).ready(function() 
+		{  
+            <!--need to declare this array outsideof the click listner or the value gets rewritten everytime-->			 
+			var aryVal = [];
+
+			<!--get the username and balance and populate the fields so the user knows they are logged in and balance-->			
+			var name = localStorage.username;
+			var userBal = localStorage.balance;
+
+			<!--if this user is new the default value will be undefined which will mess up the rest of the math-->
+			if( typeof(userBal) == "undefined"){
+                var userBal = 0;
+			}else{
+
+			}
+			console.log(userBal);
+            
+			document.getElementById("name").innerHTML = "Welcome " + name;
+			document.getElementById("bal").innerHTML = userBal;
+
+			<!--listen for the click event on the deposit button and get the valued for the current balance and the deposit-->
+            $("#deposit").click(function(evt) 
+			{
+			    
+			    evt.preventDefault();
+                
+			    var val = parseInt($('[name="depo1"]').val());
+			    var bal = parseInt($('[name="bal"]').val());
+
+			    console.log(bal);
+			    
+			    console.log(val);         
+			<!--add the deposit to the current balance and display ammount on the accout balance output-->			    
+			    var newBal = bal + val;
+			    localStorage.balance = newBal;
+
+			<!--use the array we delclared eariler to keep the deopsit values--> 
+			    aryVal.push(val);
+			    localStorage.setItem("aryBal", JSON.stringify(aryVal));
+			    var storedBal = JSON.parse(localStorage.getItem("aryBal"));
+
+			<!--this just outputs the new balance to the page-->
+			    $("output").text(newBal);
+
+			    return storedBal;
+			
+            });
+            <!--when the withdraw buttons is clicked get the values for the current balance and the withdraw ammount-->
+			$("#withdraw").click(function(evt) 
+            {
+                evt.preventDefault();
+                var val = parseInt($('[name="drawl1"]').val());
+                var bal = parseInt($('[name="bal"]').val());
+
+			<!-- subrtact the diffference and display it in the output/acount balance box-->			    
+			    var newBal = bal - val;
+			    localStorage.balance = newBal;
+
+			    aryVal.push("-" + val);
+                localStorage.setItem("aryBal", JSON.stringify(aryVal));
+                var storedBal = JSON.parse(localStorage.getItem("aryBal"));
+
+			    $("output").text(newBal);
+
+			    return storedBal;
+            });
+		});
+    </script> 
+		
+    </body>
+</html>

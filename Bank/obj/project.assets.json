@@ -28529,11 +28529,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/ErichA/code/projects/Bank/Bank/Bank.csproj",
+      "projectUniqueName": "/Users/ErichA/Projects/Bank/Bank/Bank.csproj",
       "projectName": "Bank",
-      "projectPath": "/Users/ErichA/code/projects/Bank/Bank/Bank.csproj",
+      "projectPath": "/Users/ErichA/Projects/Bank/Bank/Bank.csproj",
       "packagesPath": "/Users/ErichA/.nuget/packages/",
-      "outputPath": "/Users/ErichA/code/projects/Bank/Bank/obj",
+      "outputPath": "/Users/ErichA/Projects/Bank/Bank/obj",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/ErichA/.config/NuGet/NuGet.Config"
