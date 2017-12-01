@@ -1,0 +1,11 @@
+/Users/ErichA/code/projects/Bank/Bank/bin/Debug/netcoreapp2.0/Bank.deps.json
+/Users/ErichA/code/projects/Bank/Bank/bin/Debug/netcoreapp2.0/Bank.runtimeconfig.json
+/Users/ErichA/code/projects/Bank/Bank/bin/Debug/netcoreapp2.0/Bank.runtimeconfig.dev.json
+/Users/ErichA/code/projects/Bank/Bank/bin/Debug/netcoreapp2.0/Bank.dll
+/Users/ErichA/code/projects/Bank/Bank/bin/Debug/netcoreapp2.0/Bank.pdb
+/Users/ErichA/code/projects/Bank/Bank/obj/Debug/netcoreapp2.0/Bank.csprojResolveAssemblyReference.cache
+/Users/ErichA/code/projects/Bank/Bank/obj/Debug/netcoreapp2.0/Bank.csproj.CoreCompileInputs.cache
+/Users/ErichA/code/projects/Bank/Bank/obj/Debug/netcoreapp2.0/Bank.AssemblyInfoInputs.cache
+/Users/ErichA/code/projects/Bank/Bank/obj/Debug/netcoreapp2.0/Bank.AssemblyInfo.cs
+/Users/ErichA/code/projects/Bank/Bank/obj/Debug/netcoreapp2.0/Bank.dll
+/Users/ErichA/code/projects/Bank/Bank/obj/Debug/netcoreapp2.0/Bank.pdb
